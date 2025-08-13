@@ -22,7 +22,7 @@ export default function Footer() {
         <div className="flex flex-col items-center gap-6">
 
           <a
-            href="#home"
+            href="#"
             className="
              flex items-center gap-2 bg-foreground text-background px-4 py-2 rounded-lg
              shadow-lg 
