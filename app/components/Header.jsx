@@ -83,18 +83,18 @@ export default function Header() {
               Experience
             </a>
             <a
-              href="#clients"
-              className="py-2 hover:text-accent"
-              onClick={() => setIsOpen(false)}
-            >
-              Clients
-            </a>
-            <a
               href="#projects"
               className="py-2 hover:text-accent"
               onClick={() => setIsOpen(false)}
             >
               Projects
+            </a>
+            <a
+              href="#clients"
+              className="py-2 hover:text-accent"
+              onClick={() => setIsOpen(false)}
+            >
+              Clients
             </a>
             <a
               href="#contact"

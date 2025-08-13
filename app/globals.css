@@ -68,26 +68,20 @@ body {
 
 /* Subtle grid background utility */
 .bg-grid {
-  background-image: linear-gradient(
-      to right,
+  background-image: linear-gradient(to right,
       color-mix(in oklab, var(--foreground) 12%, transparent) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      to bottom,
+      transparent 1px),
+    linear-gradient(to bottom,
       color-mix(in oklab, var(--foreground) 12%, transparent) 1px,
-      transparent 1px
-    );
+      transparent 1px);
   background-size: 24px 24px;
 }
 
 /* dark variant for grid (slightly stronger lines) */
 :root[data-theme="dark"] .bg-grid {
-  background-image: linear-gradient(
-      to right,
+  background-image: linear-gradient(to right,
       rgba(255, 255, 255, 0.06) 1px,
-      transparent 1px
-    ),
+      transparent 1px),
     linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
 }
 
@@ -102,6 +96,7 @@ body {
 }
 
 @keyframes float {
+
   0%,
   100% {
     transform: translateY(0px) rotate(0deg);
@@ -120,14 +115,14 @@ body {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
 }
 
 .animate-marquee {
-  display: flex;
-  animation: marquee 10s linear   infinite;
+  animation: marquee 20s linear infinite;
 }
 
 .group:hover .animate-marquee {
@@ -142,13 +137,14 @@ body {
     display: none;
   }
 }
+
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
 
 .no-scrollbar {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
-
-

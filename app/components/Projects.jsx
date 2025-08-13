@@ -26,7 +26,7 @@ export default function Projects() {
               </div>
             </div>
 
-            <p className="text-foreground/70 leading-relaxed mb-4">
+            <p className="text-sm sm:text-lg text-foreground/70 leading-relaxed mb-4">
               {project.description}
             </p>
 
