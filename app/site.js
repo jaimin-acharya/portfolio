@@ -24,14 +24,26 @@ export const hero = {
   ctas: [
     { text: "View Projects", href: "#projects", variant: "primary" },
     { text: "Contact Me", href: "#contact", variant: "secondary" },
-    { text: "Download Resume", href: "/Jaimin-Acharya-Resume.pdf", variant: "outline" },
+    {
+      text: "Download Resume",
+      href: "/Jaimin-Acharya-Resume.pdf",
+      variant: "outline",
+    },
   ],
 };
 
+export const NavLinks = [
+  { href: "#about", label: "About" },
+  { href: "#tech", label: "Tech" },
+  { href: "#experience", label: "Experience" },
+  { href: "#projects", label: "Projects" },
+  { href: "#clients", label: "Clients" },
+  { href: "#contact", label: "Contact" },
+];
+
 export const about = {
   head: "I'm Jaimin Acharya focused on user-friendly interfaces and solid engineering. My toolkit includes Next.js, React, and Tailwind CSS. I enjoy shipping small, polished products.",
-  bio:
-    "I'm a passionate Full Stack Developer currently focused on improving cloud-based solutions and implementing microservices architecture. With expertise in modern web technologies, I enjoy building scalable applications and am always learning new technologies like Next.js with TypeScript.",
+  bio: "I'm a passionate Full Stack Developer currently focused on improving cloud-based solutions and implementing microservices architecture. With expertise in modern web technologies, I enjoy building scalable applications and am always learning new technologies like Next.js with TypeScript.",
 
   currentFocus:
     "Currently learning Next.js with TypeScript and improving cloud-based solutions",
@@ -62,24 +74,46 @@ export const experience = [
   },
 ];
 
-
 export const projects = [
   {
     title: "Movies World",
-    description: "a modern movie browsing platform that allows users to explore trending movies and series, manage wishlists, and enjoy a seamless movie discovery experience.",
-    tags: ["React.js", "React Router", "TailwindCSS", "FireBase", "Appwrite", "TMDB API"],
+    description:
+      "a modern movie browsing platform that allows users to explore trending movies and series, manage wishlists, and enjoy a seamless movie discovery experience.",
+    tags: [
+      "React.js",
+      "React Router",
+      "TailwindCSS",
+      "FireBase",
+      "Appwrite",
+      "TMDB API",
+    ],
     href: "https://infomoviesworld.vercel.app/",
   },
   {
     title: "Vatsal Acharya Architects",
-    description: "Vatsal Acharya Architects is a modern architecture portfolio website that showcases premium architectural projects in a clean, elegant format.",
-    tags: ["React.js", "TailwindCSS", "Framer Motion", "Styled Components", "Email.js"],
+    description:
+      "Vatsal Acharya Architects is a modern architecture portfolio website that showcases premium architectural projects in a clean, elegant format.",
+    tags: [
+      "React.js",
+      "TailwindCSS",
+      "Framer Motion",
+      "Styled Components",
+      "Email.js",
+    ],
     href: "https://vatsalacharyaarchitects.vercel.app/",
   },
   {
     title: "3D Portfolio",
-    description: "Interactive 3D portfolio built with React, Three.js, and React Three Fiber. Showcase your skills, projects, and contact info in a visually immersive way.",
-    tags: ["React", "TailwindCSS", "Three.js", "React Three Fiber", "Drei", "Framer Motion"],
+    description:
+      "Interactive 3D portfolio built with React, Three.js, and React Three Fiber. Showcase your skills, projects, and contact info in a visually immersive way.",
+    tags: [
+      "React",
+      "TailwindCSS",
+      "Three.js",
+      "React Three Fiber",
+      "Drei",
+      "Framer Motion",
+    ],
     href: "https://jaiminacharya3d.vercel.app/",
   },
   {
@@ -97,11 +131,21 @@ export const techIcons = [
   { name: "TypeScript", slug: "typescript" },
   { name: "React", slug: "react" },
   { name: "React Router", slug: "reactrouter", color: "CA4245" },
-  { name: "Next.js", slug: "nextdotjs", darkColor: "FFFFFF", lightColor: "000000" },
+  {
+    name: "Next.js",
+    slug: "nextdotjs",
+    darkColor: "FFFFFF",
+    lightColor: "000000",
+  },
   { name: "Tailwind CSS", slug: "tailwindcss" },
   { name: "Bootstrap", slug: "bootstrap" },
   { name: "Node.js", slug: "nodedotjs" },
-  { name: "Express", slug: "express", darkColor: "FFFFFF", lightColor: "000000" },
+  {
+    name: "Express",
+    slug: "express",
+    darkColor: "FFFFFF",
+    lightColor: "000000",
+  },
   { name: "Vercel", slug: "vercel", darkColor: "FFFFFF", lightColor: "000000" },
   { name: "Git", slug: "git" },
   { name: "GitHub", slug: "github", darkColor: "FFFFFF", lightColor: "000000" },
@@ -116,43 +160,63 @@ export const techIcons = [
   { name: "Yarn", slug: "yarn" },
   { name: "ESLint", slug: "eslint" },
   { name: "Postman", slug: "postman" },
-  { name: "JWT", slug: "jsonwebtokens", darkColor: "FFFFFF", lightColor: "000000" },
+  {
+    name: "JWT",
+    slug: "jsonwebtokens",
+    darkColor: "FFFFFF",
+    lightColor: "000000",
+  },
   { name: "Prettier", slug: "prettier" },
   { name: "Prisma", slug: "prisma" },
   { name: "MySQL", slug: "mysql" },
-  { name: "Shadcn/UI", slug: "shadcnui", darkColor: "FFFFFF", lightColor: "000000" },
-  { name: "Radix UI", slug: "radixui", darkColor: "FFFFFF", lightColor: "000000" },
+  {
+    name: "Shadcn/UI",
+    slug: "shadcnui",
+    darkColor: "FFFFFF",
+    lightColor: "000000",
+  },
+  {
+    name: "Radix UI",
+    slug: "radixui",
+    darkColor: "FFFFFF",
+    lightColor: "000000",
+  },
   { name: "Chakra UI", slug: "chakraui" },
   { name: "MUI", slug: "mui" },
   { name: "Notion", slug: "notion", darkColor: "FFFFFF", lightColor: "000000" },
   { name: "v0", slug: "v0", darkColor: "FFFFFF", lightColor: "000000" },
-  { name: "Claude", slug: "claude", },
-  { name: "ChatGPT", slug: "openai", darkColor: "FFFFFF", lightColor: "000000" },
+  { name: "Claude", slug: "claude" },
+  {
+    name: "ChatGPT",
+    slug: "openai",
+    darkColor: "FFFFFF",
+    lightColor: "000000",
+  },
 ];
 
 export const clientReviews = [
   {
     id: 1,
-    name: 'Vatsal Acharya',
-    position: 'Architect at Vatsal Acharya Architects',
-    img: 'clients/review1.jpg',
+    name: "Vatsal Acharya",
+    position: "Architect at Vatsal Acharya Architects",
+    img: "clients/review1.jpg",
     review:
-      'Working with Jaimin was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web development projects.',
+      "Working with Jaimin was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web development projects.",
   },
   {
     id: 2,
-    name: 'Ravi Acharya',
-    position: 'Civil Engineer at Dhuvanshi Constuction',
-    img: 'clients/review2.jpg',
+    name: "Ravi Acharya",
+    position: "Civil Engineer at Dhuvanshi Constuction",
+    img: "clients/review2.jpg",
     review:
-      'Jaimin’s expertise in web development is truly Impressive. He delivered a robust and scalable solution for our constuction site, and our online reach have significantly increased since the launch. He’s a true professional! Fantastic work.',
+      "Jaimin’s expertise in web development is truly Impressive. He delivered a robust and scalable solution for our constuction site, and our online reach have significantly increased since the launch. He’s a true professional! Fantastic work.",
   },
   {
     id: 3,
-    name: 'Raval Krutarth',
-    position: 'Web Developer',
-    img: 'clients/review3.svg',
+    name: "Raval Krutarth",
+    position: "Web Developer",
+    img: "clients/review3.svg",
     review:
-      'I can’t say enough good things about Jaimin. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.',
+      "I can’t say enough good things about Jaimin. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.",
   },
 ];

@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 
@@ -15,6 +15,18 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Jaimin Acharya – Portfolio",
   description: "Minimal portfolio built with Next.js",
+  openGraph: {
+    title: "Jaimin Acharya – Portfolio",
+    description: "Minimal portfolio built with Next.js",
+    url: "https://jaiminacharya.vercel.app",
+    siteName: "Jaimin Acharya",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Jaimin Acharya – Portfolio",
+    description: "Minimal portfolio built with Next.js",
+    image: "https://jaiminacharya.vercel.app/og.jpg",
+  },
 };
 
 export default function RootLayout({ children }) {
