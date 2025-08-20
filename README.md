@@ -1,36 +1,104 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🚀 Jaimin Acharya’s Portfolio  
 
-## Getting Started
+[![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/)  
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)  
+[![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)  
+[![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)  
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)  
 
-First, run the development server:
+---
+
+## 🌐 Live Demo
+👉 [Visit Portfolio](https://jaiminacharya.vercel.app/)  
+
+---
+
+## 📖 About
+This is my **personal developer portfolio** built with **Next.js**.  
+It highlights my **projects, skills, and experience** with a modern, responsive UI.  
+The portfolio is designed to be **fast, SEO-friendly, and mobile-first**.  
+
+---
+
+## ✨ Features
+- 🏠 **Home** – Intro with personal branding  
+- 💼 **Projects** – Showcase of my key works with links & details  
+- 👤 **About** – Background, skills, and experience  
+- 📩 **Contact** – Easy ways to reach me  
+
+---
+
+## 🛠️ Tech Stack
+- ⚡ **Next.js** – React framework for performance & SSR  
+- ⚛️ **React** – Component-based UI library  
+- 🎨 **Tailwind CSS** – Utility-first styling for modern UI  
+- ▲ **Vercel** – Seamless hosting & CI/CD  
+
+---
+
+## ⚡ Getting Started
+
+### Prerequisites
+- [Node.js](https://nodejs.org/) v16+  
+- npm or yarn  
+
+### Installation
+```bash
+# Clone repo
+git clone https://github.com/jaimin-acharya/portfolio.git
+
+# Go to folder
+cd portfolio
+
+# Install dependencies
+npm install
+````
+
+### Run Locally
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open 👉 `http://localhost:3000`
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Build & Start
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 📂 Folder Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+portfolio/
+├── app/         # Next.js pages & routing
+├── components/  # Reusable UI components
+├── public/      # Images & static assets
+├── styles/      # Tailwind / global styles
+└── package.json # Project config
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🚀 Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The site is deployed on **Vercel**.
+Just push to `main` and Vercel handles builds & deployment automatically.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🙌 Acknowledgements
+
+* [Next.js Docs](https://nextjs.org/docs)
+* [TailwindCSS Docs](https://tailwindcss.com/docs)
+* [Vercel](https://vercel.com/)
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file.
