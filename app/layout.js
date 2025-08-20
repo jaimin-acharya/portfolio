@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Inter } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 
@@ -52,7 +52,7 @@ export default function RootLayout({ children }) {
           />
 
           {/* Main content */}
-          <main className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 md:px-8">
+          <main className="relative z-10 max-w-4xl mx-auto px-2 ">
             <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
               {children}
             </ThemeProvider>
