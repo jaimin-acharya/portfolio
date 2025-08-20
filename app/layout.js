@@ -52,7 +52,7 @@ export default function RootLayout({ children }) {
           />
 
           {/* Main content */}
-          <main className="relative z-10 max-w-4xl mx-auto px-2 ">
+          <main className="relative z-10 max-w-4xl mx-auto px-2">
             <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
               {children}
             </ThemeProvider>
