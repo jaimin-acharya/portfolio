@@ -1,3 +1,5 @@
+# Jaimin's Portfolio
+
 This is my **personal developer portfolio** built with **Next.js**.  
 It highlights my **projects, skills, and experience** with a modern, responsive UI.  
 The portfolio is designed to be **fast, SEO-friendly, and mobile-first**.  
@@ -68,9 +70,7 @@ Just push to `main` and Vercel handles builds & deployment automatically.
 
 ## 🙌 Acknowledgements
 
-* [![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/docs)
-* [![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/docs)
-* [![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
+ [![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/docs) [![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/docs) [![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
 
 
 
