@@ -52,6 +52,7 @@ export default function Header() {
       </div>
 
       {/* Mobile nav panel */}
+      
       <div
         className={`fixed z-20 top-full left-0 backdrop-blur supports-[backdrop-filter]:bg-background w-full lg:hidden transition-all duration-300 ease-in-out ${
           isOpen
