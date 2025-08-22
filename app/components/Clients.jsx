@@ -1,6 +1,7 @@
 import { clientReviews } from "../site";
 import { useRef } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react"; // lucide-react icons
+import { motion } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function Clients() {
   if (!clientReviews || clientReviews.length === 0) return null;
@@ -19,12 +20,19 @@ export default function Clients() {
       id="clients"
       className="py-16 border-t border-foreground/10 overflow-hidden scroll-mt-24"
     >
-      <h2 className="text-3xl font-semibold tracking-tight">
+      {/* Fade-in Heading */}
+      <motion.h2
+        className="text-3xl font-semibold tracking-tight"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
         Hear From My Clients
-      </h2>
+      </motion.h2>
 
       <div className="relative mt-8 group">
-        {/* Chevron Left (PC only) */}
+        {/* Chevron Left */}
         <button
           onClick={() => scrollByAmount(-400)}
           className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 z-10 
@@ -41,8 +49,12 @@ export default function Clients() {
         >
           <div className="flex gap-4">
             {items.map((client, i) => (
-              <div
+              <motion.div
                 key={i}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: i * 0.2 }}
+                viewport={{ once: true }}
                 className="
                   flex-shrink-0 snap-start overflow-hidden
                   w-[340px] sm:w-[500px]
@@ -72,12 +84,12 @@ export default function Clients() {
                 <p className="mt-3 sm:mt-4 text-sm leading-relaxed text-muted-foreground">
                   {client.review}
                 </p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
 
-        {/* Chevron Right (PC only) */}
+        {/* Chevron Right */}
         <button
           onClick={() => scrollByAmount(400)}
           className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 z-10 

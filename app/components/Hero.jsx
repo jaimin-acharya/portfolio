@@ -5,6 +5,7 @@ import { Github } from "lucide-react";
 import { hero as heroData } from "../site";
 import { contact as contactData } from "../site";
 import ShinyText from "../ui/ShinyText";
+import { motion } from "framer-motion";
 
 export default function Hero() {
   const containerRef = useRef(null);
@@ -36,8 +37,8 @@ export default function Hero() {
       onPointerLeave={() => setIsActive(false)}
       className="relative px-2 py-24 sm:py-32 scroll-mt-24 overflow-hidden"
     >
+      {/* Background glow */}
       <div className="absolute w-full h-full inset-0 -z-20 overflow-hidden">
-        {/* <div className="absolute w-full h-40 bg-gradient-to-t from-blue-500/10 to-purple-500/10 rounded-sm blur-3xl "></div> */}
         <div className="absolute w-full h-40 bg-gradient-to-b from-emerald-500/10 to-cyan-500/10 rounded-sm blur-3xl "></div>
       </div>
 
@@ -48,13 +49,13 @@ export default function Hero() {
         style={{
           opacity: isActive ? 1 : 0,
           background: `radial-gradient(
-      250px circle at ${mousePosition.x}px ${mousePosition.y}px,
-      rgba(255, 255, 255, 0.18),
-      rgba(255, 255, 255, 0.05) 40%,
-      transparent 70%
-    )`,
-          filter: "blur(40px)", // softer edges
-          transform: "translateZ(0)", // GPU acceleration
+            250px circle at ${mousePosition.x}px ${mousePosition.y}px,
+            rgba(255, 255, 255, 0.18),
+            rgba(255, 255, 255, 0.05) 40%,
+            transparent 70%
+          )`,
+          filter: "blur(40px)",
+          transform: "translateZ(0)",
         }}
       />
 
@@ -76,8 +77,16 @@ export default function Hero() {
         ))}
       </div>
 
+      {/* Content */}
       <div className="relative max-w-4xl flex flex-col items-center">
-        <h1 className="text-4xl sm:text-7xl font-bold tracking-tight leading-tight">
+        {/* Heading */}
+        <motion.h1
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-4xl sm:text-7xl font-bold tracking-tight leading-tight"
+        >
           <span className="bg-foreground text-foreground/80 bg-clip-text">
             <ShinyText
               text={heroData.greeting}
@@ -86,23 +95,37 @@ export default function Hero() {
               className="custom-class"
             />
           </span>
-        </h1>
+        </motion.h1>
 
-        <div className="inline-flex mt-3 items-center gap-2 px-3 py-1 rounded-full bg-foreground/5 border border-foreground/10 mb-6">
-          <div className="w-2  h-2 bg-green-500 rounded-full animate-pulse"></div>
+        {/* Subtitle */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="inline-flex mt-3 items-center gap-2 px-3 py-1 rounded-full bg-foreground/5 border border-foreground/10 mb-6"
+        >
+          <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
           <p className="text-xs uppercase tracking-widest text-foreground/70">
             {heroData.subtitle}
           </p>
-        </div>
+        </motion.div>
 
-        <div className="flex flex-wrap">
+        {/* Button */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="flex flex-wrap"
+        >
           <a
             href={`mailto:${contactData.email}`}
             className="px-4 py-2 bg-foreground text-background rounded-md font-medium hover:opacity-90 transition-opacity"
           >
             LET'S TALK
           </a>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

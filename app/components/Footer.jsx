@@ -1,10 +1,16 @@
 "use client";
-import { Github, Linkedin, Mail, Instagram, Twitter, Facebook, ArrowUp } from "lucide-react";
+import {
+  Github,
+  Linkedin,
+  Mail,
+  Instagram,
+  Twitter,
+  Facebook,
+  ArrowUp,
+} from "lucide-react";
 import { contact } from "../site";
 
 export default function Footer() {
-
-
   const socialLinks = [
     { name: "GitHub", href: contact.socials.github, Icon: Github },
     { name: "LinkedIn", href: contact.socials.linkedin, Icon: Linkedin },
@@ -14,13 +20,10 @@ export default function Footer() {
     { name: "Facebook", href: contact.socials.facebook, Icon: Facebook },
   ];
 
-
-
   return (
     <footer className="mt-0 border-t border-neutral-200 dark:border-neutral-800">
       <div className="mx-auto max-w-5xl px-6 py-8">
         <div className="flex flex-col items-center gap-6">
-
           <a
             href="#"
             className="
@@ -31,7 +34,6 @@ export default function Footer() {
             <ArrowUp size={16} />
             Back to Top
           </a>
-
 
           {/* Social Links */}
           <div className="flex items-center gap-3">
@@ -51,7 +53,7 @@ export default function Footer() {
 
           {/* Copyright */}
           <div className="text-sm text-neutral-500 dark:text-neutral-400">
-            © {new Date().getFullYear()} {contact.author ?? 'Jaimin Acharya'}
+            © {new Date().getFullYear()} {contact.author ?? "Jaimin Acharya"}
           </div>
         </div>
       </div>
