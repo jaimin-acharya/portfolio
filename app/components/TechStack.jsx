@@ -79,7 +79,7 @@ export default function TechStack() {
               aria-label={tech.name}
               variants={item}
               whileHover={{ scale: 1.1, rotate: 3 }} // 👈 hover animation
-              whileTap={{ scale: 0.95 }}
+              whileTap={{ scale: 0.95, rotate: 3 }}
             >
               <div className="relative group flex items-center justify-center">
                 <img
