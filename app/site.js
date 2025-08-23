@@ -1,3 +1,5 @@
+import { color } from "framer-motion";
+
 export const siteMeta = {
   name: "Jaimin Acharya",
   title: "Full Stack Developer | React & Next.js Specialist",
@@ -138,7 +140,6 @@ export const techIcons = [
     lightColor: "000000",
   },
   { name: "Tailwind CSS", slug: "tailwindcss" },
-  { name: "Bootstrap", slug: "bootstrap" },
   { name: "Node.js", slug: "nodedotjs" },
   {
     name: "Express",
@@ -151,21 +152,10 @@ export const techIcons = [
   { name: "GitHub", slug: "github", darkColor: "FFFFFF", lightColor: "000000" },
   { name: "PostgreSQL", slug: "postgresql" },
   { name: "MongoDB", slug: "mongodb" },
-  { name: "Mongoose", slug: "mongoose" },
-  { name: "Firebase", slug: "firebase" },
+  { name: "Firebase", slug: "firebase", color: "FFCA28" },
   { name: "Figma", slug: "figma" },
   { name: "Canva", slug: "canva" },
-  { name: "NPM", slug: "npm" },
-  { name: "Bun", slug: "bun", color: "FFD83C" },
-  { name: "Yarn", slug: "yarn" },
-  { name: "ESLint", slug: "eslint" },
   { name: "Postman", slug: "postman" },
-  {
-    name: "JWT",
-    slug: "jsonwebtokens",
-    darkColor: "FFFFFF",
-    lightColor: "000000",
-  },
   { name: "Prettier", slug: "prettier" },
   { name: "Prisma", slug: "prisma" },
   { name: "MySQL", slug: "mysql" },

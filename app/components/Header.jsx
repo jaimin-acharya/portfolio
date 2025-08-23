@@ -28,7 +28,7 @@ export default function Header() {
             <a
               key={href}
               href={href}
-              className="text-foreground/80 hover:text-accent transition-colors"
+              className="text-foreground/80 hover:text-foreground/100 transition-colors"
             >
               {label}
             </a>
@@ -65,7 +65,7 @@ export default function Header() {
             <a
               key={href}
               href={href}
-              className="py-2 text-foreground/80 hover:text-accent transition-colors"
+              className="py-2 text-foreground/80 hover:text-foreground/100 transition-colors"
               onClick={() => setIsOpen(false)}
             >
               {label}
