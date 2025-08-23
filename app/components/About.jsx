@@ -46,12 +46,7 @@ export default function About() {
         >
           {about.head}
         </motion.p>
-        <motion.p
-          className="text-lg leading-relaxed text-foreground/80"
-          variants={item}
-        >
-          {about.bio}
-        </motion.p>
+        
         <motion.p
           className="text-lg leading-relaxed text-foreground/80"
           variants={item}
