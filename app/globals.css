@@ -46,6 +46,12 @@
 }
 
 /* Prefer dark-mode */
+:root,
+:root[data-theme="light"],
+:root[data-theme="dark"] {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
 
 /* Explicit theme override */
 :root[data-theme="light"] {

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Sun, Moon } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 function getPreferredTheme() {
   if (typeof window === "undefined") return "light";
@@ -33,7 +34,7 @@ export default function ThemeToggle() {
     window.localStorage.setItem("theme", theme);
     applyTheme(theme);
 
-    // Dispatch custom event so TechStack can listen and update immediately in same tab
+    // Custom event for other components to listen
     window.dispatchEvent(new Event("themeChange"));
   }, [theme]);
 
@@ -45,9 +46,34 @@ export default function ThemeToggle() {
       type="button"
       onClick={toggle}
       aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
-      className="inline-flex h-9 w-9 items-center justify-center rounded-md bg-background/70 text-foreground/80 hover:bg-foreground/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/40"
+      className="inline-flex h-9 w-9 items-center justify-center rounded-md 
+                 bg-background/60 text-foreground/70 hover:bg-foreground/5 
+                 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/40
+                 transition-colors duration-500 ease-in-out"
     >
-      {isDark ? <Moon size={18} strokeWidth={2} /> : <Sun size={18} strokeWidth={2} />}
+      <AnimatePresence mode="wait" initial={false}>
+        {isDark ? (
+          <motion.div
+            key="moon"
+            initial={{ opacity: 0, rotate: -90, scale: 0.8 }}
+            animate={{ opacity: 1, rotate: 0, scale: 1 }}
+            exit={{ opacity: 0, rotate: 90, scale: 0.8 }}
+            transition={{ duration: 0.4, ease: "easeInOut" }}
+          >
+            <Moon size={18} strokeWidth={2} />
+          </motion.div>
+        ) : (
+          <motion.div
+            key="sun"
+            initial={{ opacity: 0, rotate: 90, scale: 0.8 }}
+            animate={{ opacity: 1, rotate: 0, scale: 1 }}
+            exit={{ opacity: 0, rotate: -90, scale: 0.8 }}
+            transition={{ duration: 0.4, ease: "easeInOut" }}
+          >
+            <Sun size={18} strokeWidth={2} />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </button>
   );
 }
