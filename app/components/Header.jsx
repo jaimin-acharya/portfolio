@@ -36,7 +36,7 @@ export default function Header() {
       <div className="mx-auto px-6 flex items-center justify-between">
         <a
           href="#"
-          className="font-semibold tracking-tight text-sm sm:text-base"
+          className="font-semibold tracking-tight text-md sm:text-base"
         >
           {siteMeta.name}
         </a>
@@ -78,40 +78,22 @@ export default function Header() {
             animate={{ opacity: 1, y: 0, height: "100vh" }}
             exit={{ opacity: 0, y: -20, height: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="fixed z-20 top-full left-0 backdrop-blur supports-[backdrop-filter]:bg-background h-screen w-full lg:hidden overflow-hidden"
+            className="fixed z-20 top-full left-0 w-full lg:hidden overflow-hidden"
+            onClick={() => setIsOpen(false)}
           >
             {/* Nav links */}
-            <nav className="border-t border-b border-foreground/10 mx-auto max-w-5xl px-6 py-3 flex flex-col items-start gap-3 text-sm">
+            <nav className="backdrop-blur-md bg-background/80 supports-[backdrop-filter]:bg-background/90 h-full border-t border-b border-foreground/10 mx-auto max-w-5xl px-6 py-3 flex flex-col items-center justify-start gap-3 text-sm">
               {NavLinks.map(({ href, label }) => (
                 <a
                   key={href}
                   href={href}
-                  className="py-2 text-foreground/80 hover:text-foreground/100 transition-colors"
+                  className="py-2 text-lg text-foreground/80 hover:text-foreground/100 transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
                   {label}
                 </a>
               ))}
             </nav>
-
-            {/* Social Links */}
-            <div className="flex items-center justify-center text-center px-6 gap-4 mt-4">
-              {socialLinks.map(({ name, href, Icon }) => (
-                <a
-                  key={name}
-                  href={href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-foreground/70 hover:text-foreground"
-                >
-                  <Icon size={20} />
-                </a>
-              ))}
-            </div>
-            {/* Minimal Footer */}
-            <div className="mt-6 text-xs text-foreground/60 w-full text-center pt-3">
-              © {new Date().getFullYear()} Jaimin Acharya
-            </div>
           </motion.div>
         )}
       </AnimatePresence>
