@@ -19,16 +19,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen((v) => !v);
 
-  const socialLinks = [
-    { name: "GitHub", href: contact.socials.github, Icon: Github },
-    { name: "LinkedIn", href: contact.socials.linkedin, Icon: Linkedin },
-    { name: "Email", href: `mailto:${contact.email}`, Icon: Mail },
-    { name: "Instagram", href: contact.socials.instagram, Icon: Instagram },
-    { name: "Twitter", href: contact.socials.x, Icon: Twitter },
-    { name: "Facebook", href: contact.socials.facebook, Icon: Facebook },
-  ];
-
-  return (
+  return (  
     <header
       id="#"
       className="sticky top-0 z-20 py-4 max-w-full mx-auto backdrop-blur supports-[backdrop-filter]:bg-background/70 border-b border-foreground/10 shadow-[0_1px_0_0_rgba(0,0,0,0.04)]"
@@ -82,7 +73,7 @@ export default function Header() {
             onClick={() => setIsOpen(false)}
           >
             {/* Nav links */}
-            <nav className="backdrop-blur-md bg-background/80 supports-[backdrop-filter]:bg-background/90 h-full border-t border-b border-foreground/10 mx-auto max-w-5xl px-6 py-3 flex flex-col items-center justify-start gap-3 text-sm">
+            <nav className="backdrop-blur-md bg-background supports-[backdrop-filter]:bg-background h-full border-t border-b border-foreground/10 mx-auto max-w-5xl px-6 py-3 flex flex-col items-center justify-center gap-3 text-sm">
               {NavLinks.map(({ href, label }) => (
                 <a
                   key={href}

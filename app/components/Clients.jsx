@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { clientReviews } from "../site";
 import { motion } from "framer-motion";
 
@@ -36,9 +37,11 @@ export default function Clients() {
             >
               {/* Client Image */}
               <div className="flex items-center gap-3 sm:gap-4">
-                <img
+                <Image
                   src={client.img}
                   alt={client.name}
+                  height={100}
+                  width={100}
                   className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover"
                 />
                 <div>

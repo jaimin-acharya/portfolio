@@ -79,6 +79,7 @@ export const experience = [
 export const projects = [
   {
     title: "Movies World",
+    img: "/projects/moviesworld.png",
     description:
       "a modern movie browsing platform that allows users to explore trending movies and series, manage wishlists, and enjoy a seamless movie discovery experience.",
     tags: [
@@ -93,6 +94,7 @@ export const projects = [
   },
   {
     title: "Vatsal Acharya Architects",
+    img: "/projects/vatsalacharyaarchitects.png",
     description:
       "Vatsal Acharya Architects is a modern architecture portfolio website that showcases premium architectural projects in a clean, elegant format.",
     tags: [
@@ -106,6 +108,7 @@ export const projects = [
   },
   {
     title: "3D Portfolio",
+    img: "/projects/3dportfolio.png",
     description:
       "Interactive 3D portfolio built with React, Three.js, and React Three Fiber. Showcase your skills, projects, and contact info in a visually immersive way.",
     tags: [
@@ -120,6 +123,7 @@ export const projects = [
   },
   {
     title: "Pokemon Info",
+    img: "/projects/pokemoninfo.png",
     description: "Searchable PokemonCards With States.",
     tags: ["React", "Pokemon API"],
     href: "https://jaimin-pokemon-project.netlify.app/",
@@ -189,7 +193,7 @@ export const clientReviews = [
     id: 1,
     name: "Vatsal Acharya",
     position: "Architect at Vatsal Acharya Architects",
-    img: "clients/review1.jpg",
+    img: "/clients/review1.jpg",
     review:
       "Working with Jaimin was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web development projects.",
   },
@@ -197,7 +201,7 @@ export const clientReviews = [
     id: 2,
     name: "Ravi Acharya",
     position: "Civil Engineer at Dhuvanshi Constuction",
-    img: "clients/review2.jpg",
+    img: "/clients/review2.jpg",
     review:
       "Jaimin’s expertise in web development is truly Impressive. He delivered a robust and scalable solution for our constuction site, and our online reach have significantly increased since the launch. He’s a true professional! Fantastic work.",
   },
@@ -205,7 +209,7 @@ export const clientReviews = [
     id: 3,
     name: "Raval Krutarth",
     position: "Web Developer",
-    img: "clients/review3.svg",
+    img: "/clients/review3.svg",
     review:
       "I can’t say enough good things about Jaimin. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.",
   },
