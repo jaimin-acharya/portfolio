@@ -54,7 +54,7 @@ export default function Header() {
             type="button"
             onClick={toggle}
             aria-label="Toggle menu"
-            className="md:hidden inline-flex h-9 w-9 items-center justify-center rounded-md hover:bg-foreground/5"
+            className="md:hidden z-30 inline-flex h-9 w-9 items-center justify-center rounded-md hover:bg-foreground/5"
           >
             {isOpen ? <X size={18} /> : <Menu size={18} />}
           </button>
@@ -69,7 +69,7 @@ export default function Header() {
             animate={{ opacity: 1, y: 0, height: "100vh" }}
             exit={{ opacity: 0, y: -20, height: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="fixed z-20 top-full left-0 w-full lg:hidden overflow-hidden"
+            className="fixed z-20 top-0 left-0 w-full lg:hidden overflow-hidden"
             onClick={() => setIsOpen(false)}
           >
             {/* Nav links */}
