@@ -24,7 +24,7 @@ export default function Header() {
   return (
     <header
       id="#"
-      className="sticky top-0 z-20 py-4 max-w-full mx-auto backdrop-blur supports-[backdrop-filter]:bg-background/70 border-b border-foreground/10 shadow-[0_1px_0_0_rgba(0,0,0,0.04)]"
+      className="sticky top-0 z-20 py-4 max-w-4xl mx-auto backdrop-blur supports-[backdrop-filter]:bg-background/70 border-b border-foreground/10 shadow-[0_1px_0_0_rgba(0,0,0,0.04)]"
     >
       <div className="mx-auto px-6 flex items-center justify-between">
         <Link href="#" className="inline-block">
@@ -71,11 +71,11 @@ export default function Header() {
             animate={{ opacity: 1, y: 0, height: "100vh" }}
             exit={{ opacity: 0, y: -20, height: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="fixed z-20 top-0 left-0 w-full lg:hidden overflow-hidden"
+            className="fixed z-10 top-0 left-0 w-full lg:hidden overflow-hidden bg-background backdrop-blur-md"
             onClick={() => setIsOpen(false)}
           >
             {/* Nav links */}
-            <nav className="backdrop-blur-md bg-background supports-[backdrop-filter]:bg-background h-full border-t border-b border-foreground/10 mx-auto max-w-5xl px-6 py-3 flex flex-col items-center justify-center gap-3 text-sm">
+            <nav className="h-full border-t border-b border-foreground/10 mx-auto max-w-5xl px-6 py-3 flex flex-col items-center justify-center gap-3 text-sm">
               {NavLinks.map(({ href, label }) => (
                 <a
                   key={href}

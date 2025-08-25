@@ -12,7 +12,7 @@ export default function Projects() {
     >
       <h2 className="text-3xl font-semibold tracking-tight mb-8">Projects</h2>
 
-      <div className="grid gap-4 sm:grid-cols-1 lg:grid-cols-2 p-4">
+      <div className="grid gap-4 sm:grid-cols-1 lg:grid-cols-2 p-0 sm:p-2">
         {projects.map((project, idx) => (
           <motion.a
             key={project.title}
@@ -34,7 +34,7 @@ export default function Projects() {
                 height={350}
                 className="w-full h-full hover:opacity-80 transition-all duration-300 rounded-md border border-foreground/10"
               />
-              
+
               <h3 className="text-xl font-medium tracking-tight group-hover:text-foreground transition-colors">
                 {project.title}
               </h3>

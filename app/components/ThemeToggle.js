@@ -47,7 +47,7 @@ export default function ThemeToggle() {
       onClick={toggle}
       aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
       className="inline-flex h-9 w-9 items-center justify-center rounded-md 
-                 bg-background/60 text-foreground/70 hover:bg-foreground/5 
+                 bg-background/70 text-foreground/90 hover:bg-foreground/5 
                  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/40
                  transition-colors duration-500 ease-in-out"
     >
@@ -58,7 +58,7 @@ export default function ThemeToggle() {
             initial={{ opacity: 0, rotate: -90, scale: 0.8 }}
             animate={{ opacity: 1, rotate: 0, scale: 1 }}
             exit={{ opacity: 0, rotate: 90, scale: 0.8 }}
-            transition={{ duration: 0.4, ease: "easeInOut" }}
+            transition={{ duration: 0.2, ease: "easeInOut" }}
           >
             <Moon size={18} strokeWidth={2} />
           </motion.div>
@@ -68,7 +68,7 @@ export default function ThemeToggle() {
             initial={{ opacity: 0, rotate: 90, scale: 0.8 }}
             animate={{ opacity: 1, rotate: 0, scale: 1 }}
             exit={{ opacity: 0, rotate: -90, scale: 0.8 }}
-            transition={{ duration: 0.4, ease: "easeInOut" }}
+            transition={{ duration: 0.2, ease: "easeInOut" }}
           >
             <Sun size={18} strokeWidth={2} />
           </motion.div>
