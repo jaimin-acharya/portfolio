@@ -14,23 +14,25 @@ import {
 import ThemeToggle from "./ThemeToggle";
 import { NavLinks, siteMeta, contact } from "../site";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen((v) => !v);
 
-  return (  
+  return (
     <header
       id="#"
       className="sticky top-0 z-20 py-4 max-w-full mx-auto backdrop-blur supports-[backdrop-filter]:bg-background/70 border-b border-foreground/10 shadow-[0_1px_0_0_rgba(0,0,0,0.04)]"
     >
       <div className="mx-auto px-6 flex items-center justify-between">
-        <a
-          href="#"
-          className="font-semibold tracking-tight text-md sm:text-base"
-        >
-          {siteMeta.name}
-        </a>
+        <Link href="#" className="inline-block">
+          <Avatar >
+            <AvatarImage src="https://avatars.githubusercontent.com/u/180756712?v=4" />
+            <AvatarFallback>JA</AvatarFallback>
+          </Avatar>
+        </Link>
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-6 text-sm">
