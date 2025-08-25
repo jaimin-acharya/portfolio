@@ -15,7 +15,7 @@ import ThemeToggle from "./ThemeToggle";
 import { NavLinks, siteMeta, contact } from "../site";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,7 +28,7 @@ export default function Header() {
     >
       <div className="mx-auto px-6 flex items-center justify-between">
         <Link href="#" className="inline-block">
-          <Avatar >
+          <Avatar>
             <AvatarImage src="https://avatars.githubusercontent.com/u/180756712?v=4" />
             <AvatarFallback>JA</AvatarFallback>
           </Avatar>
@@ -52,18 +52,42 @@ export default function Header() {
             <ThemeToggle />
           </div>
           {/* Mobile menu button */}
-          <button
+          <motion.button
             type="button"
             onClick={toggle}
             aria-label="Toggle menu"
             className="md:hidden z-30 inline-flex h-9 w-9 items-center justify-center rounded-md hover:bg-foreground/5"
+            whileTap={{ scale: 0.9 }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
           >
-            {isOpen ? <X size={18} /> : <Menu size={18} />}
-          </button>
+            <AnimatePresence mode="wait" initial={false}>
+              {isOpen ? (
+                <motion.div
+                  key="close"
+                  initial={{ opacity: 0, rotate: -90, scale: 0.5 }}
+                  animate={{ opacity: 1, rotate: 0, scale: 1 }}
+                  exit={{ opacity: 0, rotate: 90, scale: 0.5 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <X size={18} />
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="menu"
+                  initial={{ opacity: 0, rotate: 90, scale: 0.5 }}
+                  animate={{ opacity: 1, rotate: 0, scale: 1 }}
+                  exit={{ opacity: 0, rotate: -90, scale: 0.5 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <Menu size={18} />
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </motion.button>
         </div>
       </div>
 
-      {/* Mobile nav panel */}
+      {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
