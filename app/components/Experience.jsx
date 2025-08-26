@@ -44,7 +44,7 @@ export default function Experience() {
           >
             {/* Role + Duration */}
             <div className="flex flex-wrap items-center justify-between gap-2">
-              <div className="text-lg font-semibold tracking-tight text-card-foreground">
+              <div className="text-lg font-semibold font-sans tracking-tight text-card-foreground">
                 {item.role}
               </div>
               <div className="text-xs text-muted-foreground">

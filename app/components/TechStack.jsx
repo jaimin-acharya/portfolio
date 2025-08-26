@@ -56,7 +56,7 @@ export default function TechStack() {
     >
       {/* Heading */}
       <motion.h2
-        className="text-3xl font-semibold tracking-tight mb-8"
+        className="text-3xl font-semibold font-sans tracking-tight mb-8"
         variants={item}
       >
         Stack

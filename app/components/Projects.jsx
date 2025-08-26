@@ -10,7 +10,7 @@ export default function Projects() {
       id="projects"
       className="py-20 border-t border-foreground/10 scroll-mt-24"
     >
-      <h2 className="text-3xl font-semibold tracking-tight mb-8">Projects</h2>
+      <h2 className="text-3xl font-semibold tracking-tight mb-8 font-sans">Projects</h2>
 
       <div className="grid gap-4 sm:grid-cols-1 lg:grid-cols-2 p-0 sm:p-2">
         {projects.map((project, idx) => (
@@ -35,7 +35,7 @@ export default function Projects() {
                 className="w-full h-full hover:opacity-80 transition-all duration-300 rounded-md border border-foreground/10"
               />
 
-              <h3 className="text-xl font-medium tracking-tight group-hover:text-foreground transition-colors">
+              <h3 className="text-xl font-medium font-sans tracking-tight group-hover:text-foreground transition-colors">
                 {project.title}
               </h3>
             </div>

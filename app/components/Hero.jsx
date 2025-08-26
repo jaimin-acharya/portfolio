@@ -124,7 +124,7 @@ export default function Hero() {
         >
           <a
             href={`mailto:${contactData.email}`}
-            className="px-4 py-2 bg-foreground text-background rounded-md font-medium hover:opacity-90 transition-opacity"
+            className="px-4 py-2 bg-foreground text-background  rounded-md font-medium hover:opacity-90 transition-opacity"
           >
             LET&apos;S TALK
           </a>

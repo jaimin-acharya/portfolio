@@ -24,15 +24,17 @@ export default function Header() {
   return (
     <header
       id="#"
-      className="sticky top-0 z-20 py-4 max-w-4xl mx-auto backdrop-blur supports-[backdrop-filter]:bg-background/70 border-b border-foreground/10 shadow-[0_1px_0_0_rgba(0,0,0,0.04)]"
+      className="sticky font-sans top-0 z-20 py-4 max-w-4xl mx-auto backdrop-blur supports-[backdrop-filter]:bg-background/70 border-b border-foreground/10 shadow-[0_1px_0_0_rgba(0,0,0,0.04)]"
     >
       <div className="mx-auto px-6 flex flex-row items-center justify-between">
         <Link href="#" className="inline-flex items-center gap-4">
           <Avatar>
-            <AvatarImage src="https://avatars.githubusercontent.com/u/180756712?v=4" alt="Jaimin Acharya" />
+            <AvatarImage
+              src="https://avatars.githubusercontent.com/u/180756712?v=4"
+              alt="Jaimin Acharya"
+            />
             <AvatarFallback>JA</AvatarFallback>
           </Avatar>
-          <div className="flex md:hidden text-md font-bold">{siteMeta.name}</div>
         </Link>
 
         {/* Desktop nav */}

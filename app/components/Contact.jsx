@@ -30,7 +30,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-24 border-t border-foreground/10 dark:border-foreground/20 scroll-mt-24"
+      className="py-24 border-t border-foreground/10 dark:border-foreground/20 scroll-mt-24 font-sans"
     >
       <div className="max-w-4xl mx-auto">
         {/* Heading */}
@@ -41,7 +41,7 @@ export default function Contact() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <h2 className="text-3xl font-bold tracking-tight mb-4 bg-gradient-to-r from-foreground via-foreground/80 to-foreground/60 bg-clip-text text-transparent">
+          <h2 className="text-3xl font-bold  tracking-tight mb-4 bg-gradient-to-r from-foreground via-foreground/80 to-foreground/60 bg-clip-text text-transparent">
             Contact with me
           </h2>
         </motion.div>

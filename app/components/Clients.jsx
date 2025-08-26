@@ -14,7 +14,7 @@ export default function Clients() {
     >
       {/* Heading */}
       <motion.h2
-        className="text-3xl font-semibold tracking-tight"
+        className="text-3xl font-semibold font-sans tracking-tight"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -45,10 +45,10 @@ export default function Clients() {
                   className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover"
                 />
                 <div>
-                  <div className="text-base sm:text-lg font-semibold tracking-tight">
+                  <div className="text-base font-sans sm:text-lg font-semibold tracking-tight">
                     {client.name}
                   </div>
-                  <div className="text-xs sm:text-sm text-muted-foreground">
+                  <div className="text-xs font-sans sm:text-sm text-muted-foreground">
                     {client.position}
                   </div>
                 </div>

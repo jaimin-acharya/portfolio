@@ -32,7 +32,7 @@ export default function About() {
     >
       {/* Heading */}
       <motion.h2
-        className="text-3xl font-semibold tracking-tight mb-6"
+        className="text-3xl font-semibold font-sans tracking-tight mb-6"
         variants={item}
       >
         About
@@ -64,7 +64,7 @@ export default function About() {
         <motion.div className="flex flex-wrap gap-3 mt-4" variants={item}>
           <a
             href="#contact"
-            className="px-4 py-2 bg-foreground text-background rounded-md font-medium hover:opacity-90 transition-opacity"
+            className="px-4 py-2 bg-foreground text-background font-sans rounded-md font-medium hover:opacity-90 transition-opacity"
           >
             Contact Me
           </a>
