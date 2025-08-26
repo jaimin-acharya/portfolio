@@ -12,8 +12,9 @@ import Clients from "./components/Clients";
 export default function Home() {
   return (
     <div className="font-mono w-full mx-auto min-h-screen">
-      <Header />
       <main className="mx-auto max-w-4xl px-2 sm:px-4">
+        <Header />
+
         <Hero />
 
         <About />
