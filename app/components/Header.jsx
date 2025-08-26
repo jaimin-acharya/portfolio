@@ -29,7 +29,7 @@ export default function Header() {
       <div className="mx-auto px-6 flex flex-row items-center justify-between">
         <Link href="#" className="inline-flex items-center gap-4">
           <Avatar>
-            <AvatarImage src="https://avatars.githubusercontent.com/u/180756712?v=4" />
+            <AvatarImage src="https://avatars.githubusercontent.com/u/180756712?v=4" alt="Jaimin Acharya" />
             <AvatarFallback>JA</AvatarFallback>
           </Avatar>
           <div className="flex md:hidden text-md font-bold">{siteMeta.name}</div>
