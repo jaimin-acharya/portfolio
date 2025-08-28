@@ -7,7 +7,7 @@ export default function LogoName({ siteMeta }) {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 500) { // adjust scroll threshold
+      if (window.scrollY > 100) { // adjust scroll threshold
         setShow(true);
       } else {
         setShow(false);
