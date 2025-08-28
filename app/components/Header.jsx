@@ -16,6 +16,7 @@ import { NavLinks, siteMeta, contact } from "../site";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import LogoName from "../ui/Logoname";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,6 +36,7 @@ export default function Header() {
             />
             <AvatarFallback>JA</AvatarFallback>
           </Avatar>
+          <LogoName siteMeta={siteMeta} />
         </Link>
 
         {/* Desktop nav */}
