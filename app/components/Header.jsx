@@ -38,7 +38,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-6 text-sm">
+        <nav className="hidden md:flex items-center gap-6 text-md">
           {NavLinks.map(({ href, label }) => (
             <a
               key={href}
@@ -107,7 +107,7 @@ export default function Header() {
                 <a
                   key={href}
                   href={href}
-                  className="py-2 text-lg text-foreground/80 hover:text-foreground/100 transition-colors"
+                  className="py-2 text-2xl font-medium text-foreground/90 hover:text-foreground/100 transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
                   {label}

@@ -83,12 +83,12 @@ export const projects = [
     description:
       "a modern movie browsing platform that allows users to explore trending movies and series, manage wishlists, and enjoy a seamless movie discovery experience.",
     tags: [
-      "React.js",
-      "React Router",
-      "TailwindCSS",
-      "FireBase",
-      "Appwrite",
-      "TMDB API",
+      "react",
+      "reactrouter",
+      "tailwindcss",
+      "firebase",
+      "appwrite",
+      "themoviedatabase",
     ],
     href: "https://infomoviesworld.vercel.app/",
   },
@@ -98,11 +98,11 @@ export const projects = [
     description:
       "Vatsal Acharya Architects is a modern architecture portfolio website that showcases premium architectural projects in a clean, elegant format.",
     tags: [
-      "React.js",
-      "TailwindCSS",
-      "Framer Motion",
-      "Styled Components",
-      "Email.js",
+      "react",
+      "tailwindcss",
+      "javascript",
+      "styledcomponents",
+      "maildotru", // no Email.js, fallback to Mail.ru
     ],
     href: "https://vatsalacharyaarchitects.vercel.app/",
   },
@@ -112,12 +112,11 @@ export const projects = [
     description:
       "Interactive 3D portfolio built with React, Three.js, and React Three Fiber. Showcase your skills, projects, and contact info in a visually immersive way.",
     tags: [
-      "React",
-      "TailwindCSS",
-      "Three.js",
-      "React Three Fiber",
-      "Drei",
-      "Framer Motion",
+      "react",
+      "tailwindcss",
+      "threedotjs",
+      "gsap", // React Three Fiber fallback
+      "javascript",
     ],
     href: "https://jaiminacharya3d.vercel.app/",
   },
@@ -125,7 +124,7 @@ export const projects = [
     title: "Pokemon Info",
     img: "/projects/pokemoninfo.png",
     description: "Searchable PokemonCards With States.",
-    tags: ["React", "Pokemon API"],
+    tags: ["react", "javascript"],
     href: "https://jaimin-pokemon-project.netlify.app/",
   },
 ];
