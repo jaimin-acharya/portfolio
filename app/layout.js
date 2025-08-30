@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, IBM_Plex_Sans, Inter } from "next/font/google";
+import { Geist, Geist_Mono, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 
@@ -12,10 +12,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const ibmPlexSans = IBM_Plex_Sans({
-  variable: "--font-ibm-plex-sans",
+const jetbrainsmono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"], // pick the weights you need
+  weight: ["500"], // pick the weights you need
   display: "swap",
 });
 
@@ -40,10 +40,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${ibmPlexSans.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${jetbrainsmono.variable} antialiased`}
       >
         <div className="relative">
-          {/* Grid Background */} 
+          {/* Grid Background */}
           <div className="pointer-events-none fixed inset-0 -z-10 bg-grid" />
 
           {/* Radial Overlay */}
@@ -57,7 +57,7 @@ export default function RootLayout({ children }) {
           bg-background
         "
           />
-
+     
           {/* Main content */}
           <main className="relative z-10 px-2">
             <ThemeProvider attribute="class" defaultTheme="system" enableSystem>

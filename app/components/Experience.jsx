@@ -29,16 +29,16 @@ export default function Experience() {
       viewport={{ once: true, amount: 0.2 }}
     >
       <motion.h2
-        className="text-3xl font-semibold tracking-tight"
+        className="text-3xl font-sans font-semibold tracking-tight"
         variants={item}
       >
         Experience
       </motion.h2>
 
-      <motion.div className="mt-8 grid gap-6" variants={container}>
-        {experience.map((item) => (
-          <motion.div
-            key={`${item.role}-${item.duration}`}
+      <motion.ul className="mt-8 grid gap-6" variants={container}>
+        {experience.map((item, i) => (
+          <motion.li
+            key={i}
             className="group block rounded-lg border border-foreground/10 p-6 transition-all duration-300 hover:border-foreground/20 hover:shadow-lg hover:shadow-foreground/5 hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/20"
             variants={item}
           >
@@ -72,9 +72,9 @@ export default function Experience() {
                 ))}
               </div>
             ) : null}
-          </motion.div>
+          </motion.li>
         ))}
-      </motion.div>
+      </motion.ul>
     </motion.section>
   );
 }

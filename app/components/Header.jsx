@@ -25,7 +25,7 @@ export default function Header() {
   return (
     <header
       id="#"
-      className="sticky font-sans top-0 z-20 py-4 max-w-4xl mx-auto backdrop-blur supports-[backdrop-filter]:bg-background/70 border-b border-foreground/10 shadow-[0_1px_0_0_rgba(0,0,0,0.04)]"
+      className="sticky uppercase top-0 z-20 py-4 max-w-4xl mx-auto backdrop-blur supports-[backdrop-filter]:bg-background/70 border-b border-foreground/10 shadow-[0_1px_0_0_rgba(0,0,0,0.04)]"
     >
       <div className="mx-auto px-6 flex flex-row items-center justify-between">
         <Link href="#" className="inline-flex items-center gap-4">
@@ -96,11 +96,11 @@ export default function Header() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20, height: 0 }}
-            animate={{ opacity: 1, y: 0, height: "100vh" }}
-            exit={{ opacity: 0, y: -20, height: 0 }}
+            initial={{ opacity: 0, x: "100%" }} // off-screen right
+            animate={{ opacity: 1, x: 0 }} // slide into view
+            exit={{ opacity: 0, x: "100%" }} // slide out to the right
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="fixed z-10 top-0 left-0 w-full lg:hidden overflow-hidden bg-background backdrop-blur-md"
+            className="fixed z-10 top-0 right-0 h-screen w-full lg:hidden overflow-hidden bg-background backdrop-blur-md"
             onClick={() => setIsOpen(false)}
           >
             {/* Nav links */}
@@ -109,7 +109,7 @@ export default function Header() {
                 <a
                   key={href}
                   href={href}
-                  className="py-2 text-2xl font-medium text-foreground/90 hover:text-foreground/100 transition-colors"
+                  className="py-2 text-lg font-medium text-foreground/100 transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
                   {label}

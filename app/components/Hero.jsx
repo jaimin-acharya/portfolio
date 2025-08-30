@@ -87,7 +87,7 @@ export default function Hero() {
           viewport={{ once: true }}
           className="text-4xl sm:text-7xl font-bold tracking-tight leading-tight"
         >
-          <span className="bg-foreground text-foreground/80 bg-clip-text">
+          <span className="bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent uppercase">
             <ShinyText
               text={heroData.greeting}
               disabled={false}

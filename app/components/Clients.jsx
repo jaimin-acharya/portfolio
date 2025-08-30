@@ -10,7 +10,7 @@ export default function Clients() {
   return (
     <section
       id="clients"
-      className="py-16 border-t border-foreground/10 overflow-hidden scroll-mt-24 relative"
+      className="py-16 font-sans border-t border-foreground/10 overflow-hidden scroll-mt-24 relative"
     >
       {/* Heading */}
       <motion.h2
@@ -25,11 +25,11 @@ export default function Clients() {
 
       {/* Marquee container */}
       <div className="relative mt-10 flex overflow-hidden group">
-        <div className="flex gap-4 animate-marquee group-hover:[animation-play-state:paused]">
+        <ul className="flex gap-4 animate-marquee group-hover:[animation-play-state:paused]">
           {/* Duplicate list for seamless loop */}
           {[...items, ...items].map((client, i) => (
-            <div
-              key={i}
+            <li
+              key={`${client.name}-${i}`}
               className="flex-shrink-0 w-[300px] sm:w-[400px] 
                          rounded-xl border border-foreground/10 p-4 sm:p-6
                          bg-background hover:border-foreground/20
@@ -58,9 +58,9 @@ export default function Clients() {
               <p className="mt-3 sm:mt-4 text-sm leading-relaxed text-muted-foreground">
                 {client.review}
               </p>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
 
         {/* Gradient overlays */}
         <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-background/95 to-transparent"></div>
