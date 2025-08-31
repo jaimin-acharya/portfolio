@@ -8,10 +8,10 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="py-20 border-t border-foreground/10 scroll-mt-24"
+      className="font-sans scroll-mt-24"
     >
-      <h2 className="text-3xl font-semibold tracking-tight mb-8 font-sans">
-        Projects
+      <h2 className="text-3xl text-center font-semibold tracking-tight mb-8 font-sans bg-gradient-to-r from-foreground via-foreground/90 to-foreground/70 bg-clip-text text-transparent">
+        Proof of Work
       </h2>
 
       <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 p-0 sm:p-2">
@@ -21,7 +21,7 @@ export default function Projects() {
             href={project.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="group block rounded-lg p-4 transition-all duration-300 hover:border-foreground/20 hover:shadow-lg hover:shadow-foreground/5 hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/20"
+            className="group block rounded-lg p-4 transition-all duration-300 hover:-translate-y-1"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
@@ -49,45 +49,17 @@ export default function Projects() {
             </p>
 
             {/* Tags - Icons */}
-            <div className="flex flex-wrap gap-1">
-              {project.tags.map((tag) => {
-                const slug = tag.toLowerCase().replace(/\s+/g, ""); // normalize for icon URL
-                return (
-                  <div
-                    key={tag}
-                    className="group flex items-center h-8 rounded-full bg-foreground/5 border border-foreground/10
-         overflow-hidden transition-all duration-500 ease-out
-         w-8 hover:w-auto max-w-xs cursor-pointer
-         hover:bg-foreground/10 hover:border-foreground/20 hover:shadow-md
-         hover:scale-105 active:scale-95"
-                  >
-                    {/* Icon */}
-                    <div className="w-4 h-4 mx-2 shrink-0 transition-transform duration-500 ease-out group-hover:rotate-12">
-                      <img
-                        src={`https://cdn.simpleicons.org/${slug}`}
-                        alt={tag}
-                        width={16}
-                        height={16}
-                        loading="lazy"
-                        className="w-full h-full transition-opacity duration-300"
-                        onError={(e) => {
-                          e.target.style.display = "none";
-                        }}
-                      />
-                    </div>
-
-                    {/* Name */}
-                    <span
-                      className="pr-3 text-xs font-medium opacity-0 translate-x-[-12px] scale-90
-           group-hover:opacity-100 group-hover:translate-x-0 group-hover:scale-100
-           transition-all duration-500 ease-out whitespace-nowrap
-           text-foreground/80 group-hover:text-foreground"
-                    >
-                      {tag.toUpperCase()}
-                    </span>
-                  </div>
-                );
-              })}
+            <div className="mt-4 flex flex-wrap gap-2">
+              {project.tags.map((s) => (
+                <span
+                  key={s}
+                  className="text-xs font-sans rounded px-2 py-1
+                   whitespace-nowrap pointer-events-none
+                   bg-background text-foreground border border-foreground/20 shadow-sm"
+                >
+                  {s}
+                </span>
+              ))}
             </div>
           </motion.a>
         ))}

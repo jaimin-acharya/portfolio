@@ -69,10 +69,11 @@ export const experience = [
   {
     role: "Fullstack Developer Intern",
     company: "SNB Innovations",
+    logo: "/experience/snb-logo.png",
     duration: "Aug 2025 — Present",
     description:
-      "Developed and deployed microservices using React.js and REST APIs. Currently improving cloud-based solutions and implementing microservices architecture.",
-    skills: ["React.js", "REST APIs", "Microservices", "Cloud Solutions"],
+      "Developed and deployed CRM microservices using React.js and REST APIs. Currently improving CRM-based solutions and implementing microservices architecture.",
+    skills: ["Next.js", "React.js", "REST APIs", "Microservices", "CRM Solutions"],
   },
 ];
 
@@ -83,12 +84,12 @@ export const projects = [
     description:
       "a modern movie browsing platform that allows users to explore trending movies and series, manage wishlists, and enjoy a seamless movie discovery experience.",
     tags: [
-      "react",
-      "reactrouter",
-      "tailwindcss",
-      "firebase",
-      "appwrite",
-      "themoviedatabase",
+      "React",
+      "React Router",
+      "Tailwind CSS",
+      "Firebase",
+      "Appwrite",
+      "The Movie Database",
     ],
     href: "https://infomoviesworld.vercel.app/",
   },
@@ -98,11 +99,11 @@ export const projects = [
     description:
       "Vatsal Acharya Architects is a modern architecture portfolio website that showcases premium architectural projects in a clean, elegant format.",
     tags: [
-      "react",
-      "tailwindcss",
-      "javascript",
-      "styledcomponents",
-      "maildotru", // no Email.js, fallback to Mail.ru
+      "React",
+      "Tailwind CSS",
+      "JavaScript",
+      "Styled Components",
+      "Email.js", 
     ],
     href: "https://vatsalacharyaarchitects.vercel.app/",
   },
@@ -112,11 +113,11 @@ export const projects = [
     description:
       "Interactive 3D portfolio built with React, Three.js, and React Three Fiber. Showcase your skills, projects, and contact info in a visually immersive way.",
     tags: [
-      "react",
-      "tailwindcss",
-      "threedotjs",
-      "gsap", // React Three Fiber fallback
-      "javascript",
+      "React",
+      "Tailwind CSS",
+      "Three.js",
+      "GSAP", // React Three Fiber fallback
+      "JavaScript",
     ],
     href: "https://jaiminacharya3d.vercel.app/",
   },
@@ -124,7 +125,7 @@ export const projects = [
     title: "Pokemon Info",
     img: "/projects/pokemoninfo.png",
     description: "Searchable PokemonCards With States.",
-    tags: ["react", "javascript"],
+    tags: ["React", "JavaScript", "Pokemon API"],
     href: "https://jaimin-pokemon-project.netlify.app/",
   },
 ];
@@ -208,7 +209,7 @@ export const clientReviews = [
     id: 3,
     name: "Raval Krutarth",
     position: "Web Developer",
-    img: "/clients/review3.svg",
+    img: "/clients/review3.jpeg",
     review:
       "I can’t say enough good things about Jaimin. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.",
   },

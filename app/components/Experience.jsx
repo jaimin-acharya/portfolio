@@ -2,12 +2,13 @@
 
 import { experience } from "../site";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const container = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
-    transition: { staggerChildren: 0.15 }, // delay between each card
+    transition: { staggerChildren: 0.15 },
   },
 };
 
@@ -22,59 +23,63 @@ export default function Experience() {
   return (
     <motion.section
       id="experience"
-      className="py-16 border-t border-foreground/10 scroll-mt-24"
+      className="py-16 font-sans scroll-mt-24"
       variants={container}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.2 }}
     >
+      {/* Heading */}
       <motion.h2
-        className="text-3xl font-sans font-semibold tracking-tight"
+        className="text-3xl text-center font-semibold tracking-tight mb-10 bg-gradient-to-r from-foreground via-foreground/90 to-foreground/70 bg-clip-text text-transparent"
         variants={item}
       >
         Experience
       </motion.h2>
 
-      <motion.ul className="mt-8 grid gap-6" variants={container}>
-        {experience.map((item, i) => (
-          <motion.li
+      {/* Timeline-like list */}
+      <div className="space-y-8 max-w-full ">
+        {experience.map((exp, i) => (
+          <motion.div
             key={i}
-            className="group block rounded-lg border border-foreground/10 p-6 transition-all duration-300 hover:border-foreground/20 hover:shadow-lg hover:shadow-foreground/5 hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/20"
+            className="group flex items-start gap-4 p-4 rounded-lg transition-all duration-300
+                       hover:-translate-y-1 hover:bg-foreground/5 hover:shadow-md
+                       border border-transparent hover:border-foreground/10"
             variants={item}
           >
-            {/* Role + Duration */}
-            <div className="flex flex-wrap items-center justify-between gap-2">
-              <div className="text-lg font-semibold font-sans tracking-tight text-card-foreground">
-                {item.role}
-              </div>
-              <div className="text-xs text-muted-foreground">
-                {item.duration}
-              </div>
+            {/* Logo */}
+            <div
+              className="flex-shrink-0 w-12 h-12 rounded-full bg-white flex items-center justify-center 
+                         overflow-hidden "
+            >
+              {exp.logo ? (
+                <Image
+                  src={exp.logo}
+                  alt={exp.company}
+                  width={32}
+                  height={32}
+                  className="object-contain"
+                />
+              ) : (
+                <span className="text-sm font-bold text-foreground/70">
+                  {exp.company[0]}
+                </span>
+              )}
             </div>
 
-            <span className="text-foreground/70 text-sm">{item.company}</span>
-
-            {/* Description */}
-            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              {item.description}
-            </p>
-
-            {/* Skills */}
-            {item.skills?.length ? (
-              <div className="mt-4 flex flex-wrap gap-2">
-                {item.skills.map((s) => (
-                  <span
-                    key={s}
-                    className="text-xs px-3 py-1 bg-foreground/5 rounded-full border border-foreground/10 text-foreground/80"
-                  >
-                    {s}
-                  </span>
-                ))}
-              </div>
-            ) : null}
-          </motion.li>
+            {/* Details */}
+            <div>
+              <h3 className="text-lg font-semibold tracking-tight group-hover:text-foreground transition-colors">
+                {exp.role}
+              </h3>
+              <p className="text-sm text-foreground/80">{exp.company}</p>
+              <p className="text-xs text-muted-foreground mt-1">
+                {exp.duration}
+              </p>
+            </div>
+          </motion.div>
         ))}
-      </motion.ul>
+      </div>
     </motion.section>
   );
 }

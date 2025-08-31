@@ -15,7 +15,6 @@ import ThemeToggle from "./ThemeToggle";
 import { NavLinks, siteMeta, contact } from "../site";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import LogoName from "../ui/Logoname";
 
 export default function Header() {
@@ -29,13 +28,6 @@ export default function Header() {
     >
       <div className="mx-auto px-6 flex flex-row items-center justify-between">
         <Link href="#" className="inline-flex items-center gap-4">
-          <Avatar>
-            <AvatarImage
-              src="https://avatars.githubusercontent.com/u/180756712?v=4"
-              alt="Jaimin Acharya"
-            />
-            <AvatarFallback>JA</AvatarFallback>
-          </Avatar>
           <LogoName siteMeta={siteMeta} />
         </Link>
 

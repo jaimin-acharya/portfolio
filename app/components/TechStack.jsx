@@ -48,7 +48,7 @@ export default function TechStack() {
   return (
     <motion.section
       id="tech"
-      className="py-20 border-t border-foreground/10 scroll-mt-24"
+      className="py-10 scroll-mt-24"
       variants={container}
       initial="hidden"
       whileInView="show"
@@ -56,10 +56,10 @@ export default function TechStack() {
     >
       {/* Heading */}
       <motion.h2
-        className="text-3xl font-semibold font-sans tracking-tight mb-8"
+        className="text-3xl text-center font-semibold font-sans tracking-tight mb-8 bg-gradient-to-r from-foreground via-foreground/90 to-foreground/70 bg-clip-text text-transparent"
         variants={item}
       >
-        Stack
+        Skills
       </motion.h2>
 
       {/* Icons */}

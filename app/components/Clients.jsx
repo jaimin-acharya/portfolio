@@ -10,11 +10,11 @@ export default function Clients() {
   return (
     <section
       id="clients"
-      className="py-16 font-sans border-t border-foreground/10 overflow-hidden scroll-mt-24 relative"
+      className="py-10 font-sans overflow-hidden scroll-mt-24 relative"
     >
       {/* Heading */}
       <motion.h2
-        className="text-3xl font-semibold font-sans tracking-tight"
+        className="text-3xl text-center font-semibold font-sans bg-gradient-to-r from-foreground via-foreground/90 to-foreground/70 bg-clip-text text-transparent tracking-tight mb-8"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}

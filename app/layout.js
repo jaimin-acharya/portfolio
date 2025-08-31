@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, JetBrains_Mono } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 
@@ -10,13 +10,6 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
-});
-
-const jetbrainsmono = JetBrains_Mono({
-  variable: "--font-jetbrains-mono",
-  subsets: ["latin"],
-  weight: ["500"], // pick the weights you need
-  display: "swap",
 });
 
 export const metadata = {
@@ -40,7 +33,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${jetbrainsmono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div className="relative">
           {/* Grid Background */}
@@ -57,7 +50,7 @@ export default function RootLayout({ children }) {
           bg-background
         "
           />
-     
+
           {/* Main content */}
           <main className="relative z-10 px-2">
             <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
