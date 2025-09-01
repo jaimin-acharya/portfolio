@@ -11,7 +11,7 @@ export default function Projects() {
       className="font-sans scroll-mt-24"
     >
       <h2 className="text-3xl text-center font-semibold tracking-tight mb-8 font-sans bg-gradient-to-r from-foreground via-foreground/90 to-foreground/70 bg-clip-text text-transparent">
-        Proof of Work
+        Projects
       </h2>
 
       <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 p-0 sm:p-2">

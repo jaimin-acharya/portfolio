@@ -19,33 +19,57 @@ import LogoName from "../ui/Logoname";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const toggle = () => setIsOpen((v) => !v);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header
+    <motion.header
       id="#"
-      className="sticky uppercase top-0 z-20 py-4 max-w-4xl mx-auto backdrop-blur supports-[backdrop-filter]:bg-background/70 border-b border-foreground/10 shadow-[0_1px_0_0_rgba(0,0,0,0.04)]"
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className={`fixed uppercase top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 ${
+        isScrolled ? "w-[95%] max-w-4xl" : "w-[90%] max-w-4xl"
+      }`}
     >
-      <div className="mx-auto px-6 flex flex-row items-center justify-between">
+      <div
+        className={`mx-auto px-6 py-2 flex flex-row items-center justify-between rounded-4xl border border-white/10 transition-all duration-300 ${
+          isScrolled
+            ? "bg-background/80 backdrop-blur-xl shadow-2xl shadow-black/10"
+            : "bg-background/70 backdrop-blur-lg shadow-xl shadow-black/5"
+        } supports-[backdrop-filter]:bg-background/60`}
+      >
         <Link href="#" className="inline-flex items-center gap-4">
           <LogoName siteMeta={siteMeta} />
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-6 text-md">
+        <nav className="hidden md:flex items-center gap-8 text-sm">
           {NavLinks.map(({ href, label }) => (
-            <a
+            <motion.a
               key={href}
               href={href}
-              className="text-foreground/80 hover:text-foreground/100 transition-colors"
+              className="text-foreground/80 hover:text-foreground transition-all duration-200 font-medium tracking-wide relative group"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
               {label}
-            </a>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300 rounded-full"></span>
+            </motion.a>
           ))}
         </nav>
 
-        <div className="flex items-center gap-2 sm:ml-6">
-          <div className="flex z-30">
+        <div className="flex items-center gap-3">
+          <div className="flex">
             <ThemeToggle />
           </div>
           {/* Mobile menu button */}
@@ -53,28 +77,29 @@ export default function Header() {
             type="button"
             onClick={toggle}
             aria-label="Toggle menu"
-            className="md:hidden z-30 inline-flex h-9 w-9 items-center justify-center rounded-md hover:bg-foreground/5"
+            className="md:hidden z-30 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-foreground/5 hover:bg-foreground/10 border border-foreground/10 transition-all duration-200"
+            whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.9 }}
-            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            transition={{ type: "spring", stiffness: 400, damping: 25 }}
           >
             <AnimatePresence mode="wait" initial={false}>
               {isOpen ? (
                 <motion.div
                   key="close"
-                  initial={{ opacity: 0, rotate: -90, scale: 0.5 }}
+                  initial={{ opacity: 0, rotate: -180, scale: 0.3 }}
                   animate={{ opacity: 1, rotate: 0, scale: 1 }}
-                  exit={{ opacity: 0, rotate: 90, scale: 0.5 }}
-                  transition={{ duration: 0.3 }}
+                  exit={{ opacity: 0, rotate: 180, scale: 0.3 }}
+                  transition={{ duration: 0.4, ease: "easeInOut" }}
                 >
                   <X size={18} />
                 </motion.div>
               ) : (
                 <motion.div
                   key="menu"
-                  initial={{ opacity: 0, rotate: 90, scale: 0.5 }}
+                  initial={{ opacity: 0, rotate: 180, scale: 0.3 }}
                   animate={{ opacity: 1, rotate: 0, scale: 1 }}
-                  exit={{ opacity: 0, rotate: -90, scale: 0.5 }}
-                  transition={{ duration: 0.3 }}
+                  exit={{ opacity: 0, rotate: -180, scale: 0.3 }}
+                  transition={{ duration: 0.4, ease: "easeInOut" }}
                 >
                   <Menu size={18} />
                 </motion.div>
@@ -87,30 +112,48 @@ export default function Header() {
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, x: "100%" }} // off-screen right
-            animate={{ opacity: 1, x: 0 }} // slide into view
-            exit={{ opacity: 0, x: "100%" }} // slide out to the right
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="fixed z-10 top-0 right-0 h-screen w-full lg:hidden overflow-hidden bg-background backdrop-blur-md"
-            onClick={() => setIsOpen(false)}
-          >
-            {/* Nav links */}
-            <nav className="h-full border-t border-b border-foreground/10 mx-auto max-w-5xl px-6 py-3 flex flex-col items-center justify-center gap-3 text-sm">
-              {NavLinks.map(({ href, label }) => (
-                <a
-                  key={href}
-                  href={href}
-                  className="py-2 text-lg font-medium text-foreground/100 transition-colors"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {label}
-                </a>
-              ))}
-            </nav>
-          </motion.div>
+          <>
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="fixed inset-0  z-40"
+              onClick={() => setIsOpen(false)}
+            />
+
+            {/* Mobile menu panel */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9, y: -20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.9, y: -20 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+              className="absolute top-full left-0 right-0 mt-4 mx-4 lg:hidden"
+            >
+              <div className="bg-background/95 backdrop-blur-xl rounded-2xl border border-white/10 shadow-2xl overflow-hidden">
+                {/* Nav links */}
+                <nav className="px-6 py-6 flex flex-col gap-1">
+                  {NavLinks.map(({ href, label }, index) => (
+                    <motion.a
+                      key={href}
+                      href={href}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: index * 0.1, duration: 0.3 }}
+                      className="py-3 px-4 text-lg font-medium text-foreground/90 hover:text-foreground hover:bg-foreground/5 rounded-xl transition-all duration-200"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {label}
+                    </motion.a>
+                  ))}
+                </nav>
+                
+              </div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
-    </header>
+    </motion.header>
   );
 }

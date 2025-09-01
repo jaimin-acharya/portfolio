@@ -59,7 +59,7 @@ export default function TechStack() {
         className="text-3xl text-center font-semibold font-sans tracking-tight mb-8 bg-gradient-to-r from-foreground via-foreground/90 to-foreground/70 bg-clip-text text-transparent"
         variants={item}
       >
-        Skills
+        Stack
       </motion.h2>
 
       {/* Icons */}
