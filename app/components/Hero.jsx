@@ -27,7 +27,8 @@ export default function Hero() {
         viewport={{ once: true }}
         className="text-2xl sm:text-4xl font-mono font-bold tracking-tight mb-4"
       >
-        Hi, I'm <span className="text-foreground uppercase">Jaimin Acharya</span>
+        Hi, I'm{" "}
+        <span className="text-foreground uppercase">Jaimin Acharya</span>
       </motion.h1>
 
       {/* Description */}
@@ -54,18 +55,17 @@ export default function Hero() {
       >
         <a
           href="#contact"
-          className="px-6 py-2 bg-foreground text-background rounded-md font-medium hover:opacity-90 transition"
+          className="gradient-border-bottom px-6 py-2 bg-foreground text-background rounded-md font-medium hover:opacity-90 transition"
         >
-          Book a meet
+          Get in touch
         </a>
         <a
           href={`mailto:${contactData.email}`}
-          className="px-6 py-2 bg-foreground/10 text-foreground border border-foreground/20 rounded-md font-medium hover:bg-foreground/20 transition"
+          className="gradient-border-bottom px-6 py-2 bg-foreground text-background rounded-md font-medium hover:opacity-90 transition"
         >
-          Get in touch
+          Contact Me
         </a>
       </motion.div>
     </section>
   );
 }
-         

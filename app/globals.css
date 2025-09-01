@@ -323,6 +323,29 @@ body {
   animation-play-state: paused;
 }
 
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.gradient-border-bottom {
+    position: relative;
+}
+
+.gradient-border-bottom::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #8b5cf6, #06b6d4, #10b981, #f59e0b, #ef4444, #8b5cf6);
+    background-size: 300% 100%;
+    animation: gradientShift 3s ease infinite;
+    border-radius: 0 0 6px 6px;
+}
+
 @utility hide-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
