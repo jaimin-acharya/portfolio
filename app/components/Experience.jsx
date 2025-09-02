@@ -23,7 +23,7 @@ export default function Experience() {
   return (
     <motion.section
       id="experience"
-      className="py-24 font-sans scroll-mt-24"
+      className="py-14 font-sans scroll-mt-24"
       variants={container}
       initial="hidden"
       whileInView="show"
