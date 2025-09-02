@@ -48,7 +48,7 @@ export default function TechStack() {
   return (
     <motion.section
       id="tech"
-      className="py-10 scroll-mt-24"
+      className="py-24 scroll-mt-24"
       variants={container}
       initial="hidden"
       whileInView="show"

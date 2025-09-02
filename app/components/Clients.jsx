@@ -10,7 +10,7 @@ export default function Clients() {
   return (
     <section
       id="clients"
-      className="py-10 font-sans overflow-hidden scroll-mt-24 relative"
+      className="py-24 font-sans overflow-hidden scroll-mt-24 relative"
     >
       {/* Heading */}
       <motion.h2

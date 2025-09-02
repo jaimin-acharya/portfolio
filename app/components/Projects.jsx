@@ -35,6 +35,7 @@ export default function Projects() {
                 width={800}
                 height={350}
                 loading="lazy"
+                fetchPriority="high"
                 className="w-full h-full hover:opacity-80 transition-all duration-300 rounded-md border border-foreground/10"
               />
 

@@ -40,15 +40,11 @@ export default function Header() {
       className={`fixed uppercase top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 ${
         isScrolled
           ? "w-[95%] max-w-4xl"
-          : "w-[95%] max-w-4xl backdrop-blur-md supports-[backdrop-filter]:bg-background/70"
+          : "w-[90%] max-w-4xl"
       }`}
     >
       <div
-        className={`mx-auto px-6 py-2 flex flex-row items-center justify-between rounded-4xl border border-white/10 transition-all duration-300 bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/70 ${
-          isScrolled
-            ? "bg-background/80 backdrop-blur-md shadow-2xl shadow-black/10"
-            : "bg-background/70 backdrop-blur-md shadow-xl shadow-black/5"
-        }`}
+        className={`mx-auto px-6 py-2 flex flex-row items-center justify-between rounded-4xl border border-white/10 transition-all duration-300 bg-background/95 backdrop-blur-md shadow-2xl shadow-black/10 supports-[backdrop-filter]:bg-background/70`}
       >
         <Link href="#" className="inline-flex items-center gap-4">
           <LogoName siteMeta={siteMeta} />
