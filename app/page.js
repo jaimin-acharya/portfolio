@@ -5,7 +5,7 @@ import TechStack from "./components/TechStack";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import Experience from "./components/Experience";
+// import Experience from "./components/Experience";
 import Clients from "./components/Clients";
 
 export default function Home() {
@@ -18,7 +18,7 @@ export default function Home() {
 
         <Projects />
 
-        <Experience />
+        {/* <Experience /> */}
 
         <TechStack />
 

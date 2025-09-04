@@ -37,7 +37,7 @@ export const hero = {
 export const NavLinks = [
   { href: "#about", label: "About" },
   { href: "#projects", label: "Projects" },
-  { href: "#experience", label: "Experience" },
+  // { href: "#experience", label: "Experience" },
   { href: "#tech", label: "Stack" },
   { href: "#clients", label: "Clients" },
   { href: "#contact", label: "Contact" },
