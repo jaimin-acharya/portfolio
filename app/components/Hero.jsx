@@ -1,10 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { contact as contactData } from "../site";
-import { RainbowButton } from "../ui/rainbow-button";
-import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -12,15 +9,6 @@ export default function Hero() {
       id="about"
       className="relative font-sans flex flex-col items-center justify-center text-center px-4 py-24 sm:py-32"
     >
-      {/* Avatar */}
-      {/* <Avatar className="w-20 h-20 mb-6">
-        <AvatarImage
-          src="https://avatars.githubusercontent.com/u/180756712?v=4"
-          alt="Jaimin Acharya"
-        />
-        <AvatarFallback>JA</AvatarFallback>
-      </Avatar> */}
-
       {/* Heading */}
       <motion.h1
         initial={{ opacity: 0, y: 20 }}
