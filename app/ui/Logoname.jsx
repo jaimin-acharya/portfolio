@@ -1,14 +1,13 @@
 "use client";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export default function LogoName({ siteMeta }) {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 200) {
+      if (window.scrollY > 100) {
         // adjust scroll threshold
         setShow(true);
       } else {
@@ -30,13 +29,6 @@ export default function LogoName({ siteMeta }) {
           transition={{ duration: 0.3 }}
           className="flex gap-3 items-center text-md font-medium"
         >
-          <Avatar>
-            <AvatarImage
-              src="https://avatars.githubusercontent.com/u/180756712?v=4"
-              alt="Jaimin Acharya"
-            />
-            <AvatarFallback>JA</AvatarFallback>
-          </Avatar>
           <span>{siteMeta.name}</span>
         </motion.div>
       )}

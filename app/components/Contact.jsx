@@ -1,14 +1,6 @@
 "use client";
 
-import {
-  Linkedin,
-  Github,
-  Instagram,
-  Twitter,
-  Facebook,
-  ArrowUpRight,
-  MailIcon,
-} from "lucide-react";
+import { Linkedin, Github, Twitter, MailIcon, Instagram } from "lucide-react";
 import { contact } from "../site";
 import { motion } from "framer-motion";
 
@@ -19,12 +11,10 @@ const itemVariants = {
 
 export default function Contact() {
   const socialLinks = [
-    { name: "LinkedIn", href: contact.socials.linkedin, Icon: Linkedin },
-    { name: "GitHub", href: contact.socials.github, Icon: Github },
-    { name: "Instagram", href: contact.socials.instagram, Icon: Instagram },
     { name: "X", href: contact.socials.x, Icon: Twitter },
-    { name: "Facebook", href: contact.socials.facebook, Icon: Facebook },
-    { name: "E-Mail", href: `mailto:${contact.email}`, Icon: MailIcon },
+    { name: "GitHub", href: contact.socials.github, Icon: Github },
+    { name: "LinkedIn", href: contact.socials.linkedin, Icon: Linkedin },
+    {name: "Instagram", href: contact.socials.instagram, Icon: Instagram},
   ];
 
   return (
@@ -32,23 +22,50 @@ export default function Contact() {
       id="contact"
       className="py-24 dark:border-foreground/20 scroll-mt-24"
     >
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-2xl mx-auto px-4 text-center space-y-10">
+        {/* Contact Button */}
+        <motion.a
+          href="#contact"
+          className="text-3xl text-center font-semibold tracking-tight mb-8 font-sans bg-gradient-to-r from-foreground via-foreground/90 to-foreground/70 bg-clip-text text-transparent"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          Get in Touch
+        </motion.a>
+
         {/* Heading */}
         <motion.div
-          className="mb-16"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <h2 className="text-3xl text-center font-bold font-sans tracking-tight mb-4 bg-gradient-to-r from-foreground via-foreground/90 to-foreground/70 bg-clip-text text-transparent">
-            Get in Touch
-          </h2>
+          <p className="text-foreground/70 mt-10">
+            I&apos;m always excited to collaborate on interesting projects or
+            just have a great tech conversation!
+          </p>
         </motion.div>
 
-        {/* Social Links */}
+        {/* Email Box */}
         <motion.div
-          className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4"
+          className="flex items-center justify-between px-4 py-3 rounded-lg bg-foreground/5 border border-foreground/10"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+        >
+          <span className="text-sm sm:text-base font-medium">
+            {contact.email}
+          </span>
+          <a href={`mailto:${contact.email}`}>
+            <MailIcon className="text-blue-500" size={18} />
+          </a>
+        </motion.div>
+
+        {/* Social Icons */}
+        <motion.div
+          className="flex justify-center gap-4"
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
@@ -63,29 +80,25 @@ export default function Contact() {
               href={href}
               target="_blank"
               rel="noreferrer noopener"
-              aria-label={`Open ${name} profile`}
+              aria-label={`Open ${name}`}
               variants={itemVariants}
               transition={{ duration: 0.5, ease: "easeOut" }}
-              className="group flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-lg 
-                 border border-foreground/10 transition-all duration-300 
-                 hover:border-foreground/20 hover:shadow-lg hover:shadow-foreground/5 
-                 hover:bg-foreground/5 hover:-translate-y-1 
-                 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground/20"
+              className="flex items-center justify-center w-12 h-12 rounded-lg bg-foreground/10 hover:bg-foreground/20 transition"
             >
-              <div className="flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-foreground text-background group-hover:scale-105 transition-transform duration-200">
-                <Icon size={18} />
-              </div>
-              <div className="flex-1 min-w-0">
-                <div className="font-medium text-foreground text-sm sm:text-base truncate">
-                  {name}
-                </div>
-              </div>
-              <ArrowUpRight
-                size={16}
-                className="text-foreground/40 group-hover:text-foreground/70 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200"
-              />
+              <Icon size={20} />
             </motion.a>
           ))}
+        </motion.div>
+
+        {/* Response Note */}
+        <motion.div
+          className="flex items-center justify-center gap-2 px-3 py-2 rounded-md bg-foreground/5 text-sm text-foreground/70"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
+        >
+          💬 I typically respond within 30 Minutes!
         </motion.div>
       </div>
     </section>

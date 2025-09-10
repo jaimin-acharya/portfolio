@@ -1,25 +1,8 @@
 "use client";
-import {
-  Github,
-  Linkedin,
-  Mail,
-  Instagram,
-  Twitter,
-  Facebook,
-  ArrowUp,
-} from "lucide-react";
+import { ArrowUp } from "lucide-react";
 import { contact } from "../site";
 
 export default function Footer() {
-  const socialLinks = [
-    { name: "GitHub", href: contact.socials.github, Icon: Github },
-    { name: "LinkedIn", href: contact.socials.linkedin, Icon: Linkedin },
-    { name: "Email", href: `mailto:${contact.email}`, Icon: Mail },
-    { name: "Instagram", href: contact.socials.instagram, Icon: Instagram },
-    { name: "Twitter", href: contact.socials.x, Icon: Twitter },
-    { name: "Facebook", href: contact.socials.facebook, Icon: Facebook },
-  ];
-
   return (
     <footer className="mt-0 border-t border-neutral-200 dark:border-neutral-800">
       <div className="mx-auto max-w-5xl px-6 py-8">
@@ -35,25 +18,15 @@ export default function Footer() {
             Back to Top
           </a>
 
-          {/* Social Links */}
-          <div className="flex items-center gap-3">
-            {socialLinks.map(({ name, href, Icon }) => (
-              <a
-                key={name}
-                href={href}
-                aria-label={name}
-                target="_blank"
-                rel="noreferrer noopener"
-                className="flex h-8 w-8 items-center justify-center rounded-full text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 transition-colors duration-200"
-              >
-                <Icon className="w-6 h-6" size={16} strokeWidth={1.5} />
-              </a>
-            ))}
-          </div>
-
           {/* Copyright */}
           <div className="text-sm text-neutral-500 dark:text-neutral-400">
-            © {new Date().getFullYear()} {contact.author ?? "Jaimin Acharya"}
+            © {new Date().getFullYear()}{" "}
+            {contact.author ?? (
+              <>
+                Made with <span className="text-red-500">❤️</span> by Jaimin
+                Acharya
+              </>
+            )}
           </div>
         </div>
       </div>

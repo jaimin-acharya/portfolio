@@ -39,12 +39,12 @@ export default function Header() {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={`fixed uppercase top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 ${
         isScrolled
-          ? "w-[95%] max-w-4xl"
+          ? "w-[90%] max-w-4xl"
           : "w-[90%] max-w-4xl"
       }`}
     >
       <div
-        className={`mx-auto px-6 py-2 flex flex-row items-center justify-between rounded-4xl border border-white/10 transition-all duration-300 bg-background/95 backdrop-blur-md shadow-2xl shadow-black/10 supports-[backdrop-filter]:bg-background/70`}
+        className={`mx-auto px-6 py-2 flex flex-row items-center justify-between rounded-lg border border-white/10 transition-all duration-300 bg-background/95 backdrop-blur-md shadow-2xl shadow-black/10 supports-[backdrop-filter]:bg-background/70`}
       >
         <Link href="#" className="inline-flex items-center gap-4">
           <LogoName siteMeta={siteMeta} />
@@ -129,7 +129,7 @@ export default function Header() {
               transition={{ duration: 0.4, ease: "easeOut" }}
               className="absolute top-full left-0 right-0 mt-4 mx-4 lg:hidden"
             >
-              <div className="bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/70 rounded-2xl border border-white/10 shadow-2xl overflow-hidden">
+              <div className="bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/70 rounded-lg border border-white/10 shadow-2xl overflow-hidden">
                 {/* Nav links */}
                 <nav className="px-6 py-6 flex flex-col gap-1">
                   {NavLinks.map(({ href, label }, index) => (
